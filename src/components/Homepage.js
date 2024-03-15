@@ -90,8 +90,8 @@ export default function Homepage() {
         onChange={(e) => setTodo(e.target.value)}
       />
 
-      {todos.map((todo) => (
-        <div className="todo">
+      {todos.map((todo, index) => (
+        <div key={index} className="todo">
           <h1>{todo.todo}</h1>
           <EditIcon
             fontSize="large"
